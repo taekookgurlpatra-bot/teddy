@@ -1,4 +1,4 @@
-window.onload = () => {
+document.addEventListener("DOMContentLoaded", () => {
 
   const page1 = document.getElementById("page1");
   const page2 = document.getElementById("page2");
@@ -19,23 +19,23 @@ window.onload = () => {
     catcher.style.left = `${x}px`;
   }
 
-  // Mouse move
+  // Mouse
   gameArea.addEventListener("mousemove", e=>{
     moveCatcher(e.clientX - gameArea.getBoundingClientRect().left);
   });
 
-  // Touch move
+  // Touch
   gameArea.addEventListener("touchmove", e=>{
     e.preventDefault();
     moveCatcher(e.touches[0].clientX - gameArea.getBoundingClientRect().left);
   }, {passive:false});
 
-  // Device tilt
+  // Tilt
   if(window.DeviceOrientationEvent){
     window.addEventListener("deviceorientation", e=>{
-      const gamma = e.gamma; // tilt left/right
+      const gamma = e.gamma;
       const center = gameArea.offsetWidth/2;
-      const maxTilt = 30; 
+      const maxTilt = 30;
       const x = center + (gamma/maxTilt)*(center - catcher.offsetWidth/2);
       moveCatcher(x);
     });
@@ -125,11 +125,11 @@ window.onload = () => {
     },700);
   }
 
-  // --- Button Next ---
-  document.getElementById("next1").onclick = ()=>{
+  // --- Next Button ---
+  document.getElementById("next1").addEventListener("click", ()=>{
     page1.style.display="none";
     page2.style.display="block";
     startGame();
-  }
+  });
 
-}
+});
