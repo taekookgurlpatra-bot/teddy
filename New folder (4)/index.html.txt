@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teddy Day</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Page 1 -->
+<div id="page1" class="page">
+  <img src="intro.gif" alt="Teddy Magic" id="intro-gif">
+  <h2>Sprinkling magic ✨✨..</h2>
+  <button id="next1">Next</button>
+</div>
+
+<!-- Page 2: Game -->
+<div id="page2" class="page" style="display:none;">
+  <h1>Catch the Teddies! 🧸</h1>
+  <div id="game-area">
+    <div id="catcher">🧸</div>
+  </div>
+  <p id="score">Teddies: 0/10</p>
+</div>
+
+<!-- Page 3: Final Note -->
+<div id="page3" class="page" style="display:none;">
+  <div class="note">
+    <p>Hey love,</p>
+    <p>ik aaj teddy day pr i am very sorry i cant gift u one isiliye virtually de rhi..ussi se khudh ho jao jaanuu..ilysmmmmmmmm 🫠💌💗</p>
+    <img src="final.jpg" alt="Teddy Day" id="final-img">
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
